@@ -90,13 +90,13 @@ class Main extends CI_Controller
         $email->isSMTP();
         $email->Host = 'smtp.gmail.com'; // Your SMTP host
         $email->SMTPAuth = true;
-        $email->Username = 'lalchetaparth@gmail.com'; // Your SMTP username
-        $email->Password = 'oxwfxppvvktielbh'; // Your SMTP password
+        $email->Username = 'your@email.com'; // Your SMTP username
+        $email->Password = '**************'; // Your SMTP password
         $email->SMTPSecure = 'tls';
         $email->Port = 587;
 
         // Email Settings
-        $email->setFrom('lalchetaparth@gmail.com', 'Parth lalcheta');
+        $email->setFrom('from@email.com', 'Your name');
         $email->addAddress($to_email); // Add a recipient
         $email->isHTML(true);
         $verification_link = base_url('Main/verify/' . $verification_token);
